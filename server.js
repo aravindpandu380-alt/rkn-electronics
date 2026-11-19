@@ -16,7 +16,15 @@ if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
 if (!fs.existsSync(DB_FILE)) fs.writeFileSync(DB_FILE, "[]");
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(__dirname));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.get("/admin.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "admin.html"));
+});
 
 function readBookings() {
   try { return JSON.parse(fs.readFileSync(DB_FILE, "utf8")); }
@@ -88,3 +96,4 @@ app.get("/health", (req, res) => res.json({ ok: true, app: "RKN Electrics & Elec
 app.get("*", (req, res) => res.sendFile(path.join(__dirname, "public", "index.html")));
 
 app.listen(PORT, () => console.log(`RKN website running on port ${PORT}`));
+app.get("*", (req, res) => res.sendFile(path.join(__dirname, "public", "index.html")));
