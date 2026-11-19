@@ -93,8 +93,11 @@ app.post("/api/bookings", (req, res) => {
 });
 
 
+app.get("/health", (req, res) => {
+  res.json({ ok: true, app: "RKN Electrics & Electronics" });
+});
 
-app.listen(PORT, () => console.log(`RKN website running on port ${PORT}`));
-app.get("/health", (req, res) => res.json({ ok: true, app: "RKN Electrics & Electronics" }));
+app.listen(PORT, () => {
+  console.log(`RKN website running on port ${PORT}`);
+});
 
-app.listen(PORT, () => console.log(`RKN website running on port ${PORT}`));
