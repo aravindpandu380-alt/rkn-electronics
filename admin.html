@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RKN Admin</title><style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f3f5f8;color:#172033}
+header{background:#111827;color:white;padding:18px 16px}header h1{margin:0;font-size:21px}
+main{max-width:900px;margin:22px auto;padding:0 14px}.panel,.booking-item{background:white;border:1px solid #e1e5eb;border-radius:12px;padding:18px;margin-bottom:16px}
+h2{font-size:19px;margin:0 0 14px}label{display:block;font-weight:600;margin:12px 0}
+input,select{display:block;width:100%;padding:12px;margin-top:6px;border:1px solid #cbd2dc;border-radius:8px;font-size:16px}
+button{padding:12px 16px;border:0;border-radius:8px;background:#1459c7;color:white;font-weight:700;font-size:15px}
+.notice{color:#b42318}.booking-item{display:grid;grid-template-columns:1fr 1fr;gap:16px}a{color:#075bc7}
+@media(max-width:650px){.booking-item{grid-template-columns:1fr}}
+</style></head><body><header><h1>RKN Electrics &amp; Electronics — Admin</h1></header><main>
+<section id="loginPanel" class="panel"><h2>Admin Login</h2><form id="loginForm">
+<label>User ID<input name="userId" required autocomplete="username"></label>
+<label>Password<input name="password" type="password" required autocomplete="current-password"></label>
+<button type="submit">Login</button><p id="loginMsg" class="notice"></p></form></section>
+<section id="dashboard" hidden><div class="panel"><h2>Customer Bookings</h2><button id="logout" type="button">Logout</button></div><div id="bookingList"></div></section>
+</main><script src="/admin.js"></script></body></html>
