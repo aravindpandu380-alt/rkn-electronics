@@ -1,0 +1,201 @@
+<!DOCTYPE html>  <html lang="te">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>RKN Electronics - TV Sales & Service</title>  
+<style>  
+*{box-sizing:border-box}  
+body{margin:0;font-family:Arial,sans-serif;background:#f3f5f9;color:#172033}  
+header{background:#10264d;color:white;text-align:center;padding:25px 12px}  
+header h1{margin:0}  
+nav{background:#173b70;padding:12px;text-align:center}  
+nav a{color:white;text-decoration:none;margin:7px;font-weight:bold}  
+.hero{background:#2469a8;color:white;text-align:center;padding:35px 15px}  
+.btn{display:inline-block;background:#ffcc33;color:#172033;padding:11px 18px;border-radius:7px;text-decoration:none;font-weight:bold;margin:7px}  
+.container{max-width:1000px;margin:auto;padding:22px 14px}  
+h2{text-align:center;color:#173b70}  
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}  
+.item,.panel{background:white;padding:17px;border-radius:10px;box-shadow:0 2px 8px #0001}  
+.item{text-align:center}  
+.item h3{margin:0;color:#173b70}  
+label{display:block;font-weight:bold;margin:13px 0 5px}  
+input,select,textarea{width:100%;padding:12px;border:1px solid #ccd3df;border-radius:7px;font-size:16px}  
+textarea{min-height:85px}  
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}  
+.check{background:#f2f5fa;padding:10px;border-radius:7px}  
+.check input{width:auto;margin-right:8px}  
+.check label{display:inline;margin:0;font-weight:normal}  
+button{width:100%;padding:14px;background:#173b70;color:white;border:0;border-radius:7px;font-size:17px;margin-top:18px}  
+footer{background:#10264d;color:white;text-align:center;padding:20px}  
+</style>  
+</head>  
+<body>  <header>  
+<h1>RKN Electronics</h1>  
+<p>TV Sales & Service</p>  
+<p>మీ నమ్మకమైన TV సేల్స్ మరియు రిపేర్ సర్వీస్</p>  
+</header>  <nav>  
+<a href="#home">Home</a>  
+<a href="#brands">TV Brands</a>  
+<a href="#booking">TV Complaint</a>  
+<a href="#areas">Service Areas</a>  
+<a href="#contact">Contact</a>  
+</nav>  <section class="hero" id="home">  
+<h2 style="color:white">TV Sales & TV Repair Service</h2>  
+<p>కొత్త TV కొనుగోలు మరియు TV రిపేర్ కోసం సంప్రదించండి.</p>  
+<a class="btn" href="tel:9100168283">Call Now</a>  
+<a class="btn" href="#booking">Book TV Complaint</a>  
+</section>  <section class="container" id="brands">  
+<h2>Available TV Brands</h2>  
+<div class="grid">  
+<div class="item"><h3>Samsung</h3></div>  
+<div class="item"><h3>LG</h3></div>  
+<div class="item"><h3>Sony</h3></div>  
+<div class="item"><h3>TCL</h3></div>  
+<div class="item"><h3>Mi / Xiaomi</h3></div>  
+<div class="item"><h3>Hisense</h3></div>  
+<div class="item"><h3>Panasonic</h3></div>  
+<div class="item"><h3>Philips</h3></div>  
+<div class="item"><h3>Haier</h3></div>  
+<div class="item"><h3>Toshiba</h3></div>  
+<div class="item"><h3>Acer</h3></div>  
+<div class="item"><h3>Kodak</h3></div>  
+<div class="item"><h3>Thomson</h3></div>  
+<div class="item"><h3>Onida</h3></div>  
+<div class="item"><h3>Sansui</h3></div>  
+<div class="item"><h3>Vu</h3></div>  
+<div class="item"><h3>iFFALCON</h3></div>  
+</div>  
+<p style="text-align:center"><b>TV Sizes:</b> 32, 43, 50, 55, 65 Inch</p>  
+<p style="text-align:center">ధరలు మరియు మోడళ్ల కోసం కాల్ చేయండి.</p>  
+</section>  <section class="container" id="booking">  
+<h2>TV Complaint Booking</h2>  
+<div class="panel">  
+<form id="bookingForm">  <label for="name">మీ పేరు *</label>
+<input id="name" name="name" required>
+
+<label for="phone">మొబైల్ నంబర్ *</label>
+<input id="phone" name="phone" type="tel" pattern="[0-9]{10}" maxlength="10" required>
+
+<label for="brand">TV Brand</label>
+<select id="brand" name="brand">
+
+<option value="">Brand ఎంచుకోండి</option>  
+<option>Samsung</option><option>LG</option><option>Sony</option>  
+<option>TCL</option><option>Mi / Xiaomi</option><option>Hisense</option>  
+<option>Panasonic</option><option>Philips</option><option>Haier</option>  
+<option>Toshiba</option><option>Acer</option><option>Kodak</option>  
+<option>Thomson</option><option>Onida</option><option>Sansui</option>  
+<option>Vu</option><option>iFFALCON</option><option>Other</option>  
+</select>  <label for="model">TV Size / Model</label>
+<input id="model" name="model" placeholder="ఉదా: 43 Inch LED TV">
+
+<label>TV Complaint Type * (ఒకటి లేదా ఎక్కువ ఎంచుకోండి)</label>
+
+<div class="checks">  
+<div class="check"><input type="checkbox" name="complaints" value="Backlight Complaint" id="c1"><label for="c1">Backlight Complaint</label></div>  
+<div class="check"><input type="checkbox" name="complaints" value="Power Supply Complaint" id="c2"><label for="c2">Power Supply Complaint</label></div>  
+<div class="check"><input type="checkbox" name="complaints" value="Indicator Blinking" id="c3"><label for="c3">Indicator Blinking</label></div>  
+<div class="check"><input type="checkbox" name="complaints" value="No Indicator" id="c4"><label for="c4">No Indicator</label></div>  
+<div class="check"><input type="checkbox" name="complaints" value="No Power Supply" id="c5"><label for="c5">No Power Supply</label></div>  
+<div class="check"><input type="checkbox" name="complaints" value="Motherboard Dead Condition" id="c6"><label for="c6">Motherboard Dead Condition</label></div>  
+<div class="check"><input type="checkbox" name="complaints" value="Display Complaint" id="c7"><label for="c7">Display Complaint</label></div>  
+<div class="check"><input type="checkbox" name="complaints" value="Display Break Complaint" id="c8"><label for="c8">Display Break Complaint</label></div>  
+<div class="check"><input type="checkbox" name="complaints" value="Other Problem" id="c9"><label for="c9">Other Problem</label></div>  
+</div>  <label for="issue">ఇంకా వివరాలు</label>
+
+<textarea id="issue" name="issue" placeholder="TV సమస్య గురించి వివరించండి"></textarea>  <label for="area">మీ గ్రామం *</label>
+<select id="area" required>
+
+<option value="">గ్రామం ఎంచుకోండి</option>  
+<option>Nellipaka</option>  
+<option>Lakshmipuram</option>  
+<option>Cherupalli</option>  
+<option>Kothapalli</option>  
+<option>Ramachandrapuram</option>  
+<option>Lachigudem</option>  
+<option>Bhimavaram</option>  
+<option>Marayagudem</option>  
+<option>Bhadrachalam</option>  
+<option>Sarapaka</option>  
+</select>  <label for="address">పూర్తి అడ్రస్ *</label>
+
+<textarea id="address" required placeholder="ఇంటి అడ్రస్ / దగ్గరలోని గుర్తు"></textarea>  <button type="submit">Submit Complaint</button>
+
+<p id="message" style="text-align:center;font-weight:bold"></p>  
+</form>  
+</div>  
+</section>  <section class="container" id="areas">  
+<h2>Our Service Areas</h2>  
+<div class="grid">  
+<div class="item">Nellipaka</div>  
+<div class="item">Lakshmipuram</div>  
+<div class="item">Cherupalli</div>  
+<div class="item">Kothapalli</div>  
+<div class="item">Ramachandrapuram</div>  
+<div class="item">Lachigudem</div>  
+<div class="item">Bhimavaram</div>  
+<div class="item">Marayagudem</div>  
+<div class="item">Bhadrachalam</div>  
+<div class="item">Sarapaka</div>  
+</div>  
+</section>  <section class="container" id="contact">  
+<div class="panel" style="text-align:center">  
+<h2>Contact RKN Electronics</h2>  
+<p>Phone: 9100168283</p>  
+<p>Location: Sarapaka</p>  
+<a class="btn" href="tel:9100168283">Call Now</a>  
+</div>  
+</section>  <footer>  
+<p>© 2026 RKN Electronics. All Rights Reserved.</p>  
+<p>TV Sales & Service - Sarapaka</p>  
+</footer>  <script>  
+document.getElementById("bookingForm").addEventListener("submit", async function(e) {  
+  e.preventDefault();  
+  
+  const complaints = Array.from(  
+    document.querySelectorAll('input[name="complaints"]:checked')  
+  ).map(item => item.value);  
+  
+  const message = document.getElementById("message");  
+  
+  if (complaints.length === 0) {  
+    message.textContent = "దయచేసి TV Complaint ఎంచుకోండి.";  
+    return;  
+  }  
+  
+  const data = {  
+    name: document.getElementById("name").value.trim(),  
+    phone: document.getElementById("phone").value.trim(),  
+    brand: document.getElementById("brand").value,  
+    model: document.getElementById("model").value.trim(),  
+    serviceType: "TV Repair",  
+    issue: complaints.join(", ") + " - " +  
+      document.getElementById("issue").value.trim(),  
+    address: document.getElementById("address").value.trim() +  
+      ", " + document.getElementById("area").value  
+  };  
+  
+  message.textContent = "Booking పంపిస్తున్నాము...";  
+  
+  try {  
+    const response = await fetch("/api/bookings", {  
+      method: "POST",  
+      headers: {"Content-Type":"application/json"},  
+      body: JSON.stringify(data)  
+    });  
+  
+    const result = await response.json();  
+  
+    if (!response.ok) {  
+      throw new Error("Booking failed");  
+    }  
+  
+    message.textContent = "మీ Complaint విజయవంతంగా పంపబడింది. ధన్యవాదాలు!";  
+    this.reset();  
+  
+  } catch (error) {  
+    message.textContent = "Booking పంపలేకపోయాము. దయచేసి 9100168283 కి కాల్ చేయండి.";  
+  }  
+});  
+</script>  </body>  
+</html>
